@@ -35,13 +35,13 @@ export const productSlice = createSlice({
       state.products = action.payload;
     },
     applyDiscount(state, action) {
-      const { productId, discount } = action.payload;
+      //i no deh use am for the code
+      const { productId } = action.payload;
       const product = state.products.find(
         (product) => product.id === productId
       );
       if (product) {
-        product.discount = discount;
-        product.finalPrice = product.price * (1 - discount / 100);
+        product.finalPrice = product.price * (1 - product.discount / 100);
       }
     },
   },

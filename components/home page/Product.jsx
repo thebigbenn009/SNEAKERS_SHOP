@@ -10,8 +10,12 @@ import Minus from "../../public/images/icon-minus.svg";
 import Cart from "../../public/images/icon-cart.svg";
 import "../../styles/product.css";
 import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+
+import { useState } from "react";
 
 const Product = () => {
+  const [discountedPrice, setDiscountedPrice] = useState(null);
   const dispatch = useDispatch();
   const { selectedProductId, selectedQuantity, products } = useSelector(
     (state) => state.product
@@ -23,7 +27,19 @@ const Product = () => {
   if (!product) {
     return <div>No product found</div>;
   }
+  //just declare the function here
+  const getDiscount = (price, discount) => {
+    return price * (1 - discount / 100);
+  };
+  console.log(getDiscount(product.price, product.discount));
+  useEffect(() => {
+    // const discountVal = getDiscount(product.price, product.discount);
+    // setDiscountedPrice(discountVal)
 
+    //the code above will work fine too
+    setDiscountedPrice(getDiscount());
+    //the produc object deh inside the dependency array, meaning that the value will update anytime the you change the product obejct
+  }, [product]);
   return (
     <div className="product">
       <div className="product-image">
@@ -44,7 +60,7 @@ const Product = () => {
         </div>
 
         <div className="product-price">
-          <h2>${}</h2>
+          <h2>${discountedPrice}</h2>
           <div className="price-percentage">
             <h1>{product.discount}%</h1>
           </div>
