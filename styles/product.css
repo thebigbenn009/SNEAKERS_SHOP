@@ -1,0 +1,99 @@
+.product {
+  font-family: Kumbh Sans;
+}
+.product-details h3 {
+  color: #69707d;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 10px;
+  letter-spacing: 1.5px;
+}
+.product-details h2 {
+  text-transform: capitalize;
+  color: #1d2026;
+  font-size: 28px;
+  line-height: 1.3;
+  letter-spacing: 1.5px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+.product-details p {
+  color: #69707d;
+  font-size: 15px;
+  margin-top: 10px;
+  font-weight: regular;
+  letter-spacing: 1px;
+}
+.product-price {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+  margin-top: 10px;
+  place-items: center;
+  width: 326px;
+  height: 34px;
+}
+.product-price h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1d2026;
+}
+.price-percentage {
+  background-color: #1d2026;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  width: 51px;
+  height: 27px;
+  border-radius: 7px;
+  margin-left: -65px;
+}
+.price-percentage h1 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.product-price h3 {
+  text-decoration: line-through;
+  font-size: 16px;
+  color: #69707d;
+}
+.product-amount {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 30px;
+  background-color: #979797;
+  justify-content: space-between;
+  place-items: center;
+  height: 56px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 13px;
+  border: none;
+}
+.product-amount span {
+  font-size: 16px;
+  font-weight: bold;
+}
+.btn {
+  background-color: #ff7e1b;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 18px 104px;
+  width: 100%;
+  border-radius: 13px;
+  color: #1d2026;
+  font-size: 16px;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: auto auto;
+  place-content: center;
+  place-items: center;
+  gap: 10px;
+}
+.cart-add {
+  width: 17.46px;
+  height: 16px;
+  color: #d9e1f1;
+}
